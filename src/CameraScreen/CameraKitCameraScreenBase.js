@@ -252,7 +252,7 @@ export default class CameraScreenBase extends Component {
     }
     if (showButton) {
       const buttonNameSuffix = this.isCaptureRetakeMode() ? 'CaptureRetakeButtonText' : 'ButtonText';
-      const buttonText = _(this.props).get(`actions.${type}${buttonNameSuffix}`)
+      const buttonText = _.get(this.props, `actions.${type}${buttonNameSuffix}`)
       return (
         <TouchableOpacity
           style={[styles.bottomButton, { justifyContent: type === 'left' ? 'flex-start' : 'flex-end' }]}
